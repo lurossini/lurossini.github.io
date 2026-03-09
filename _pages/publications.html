@@ -11,26 +11,44 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
+<div class="publications-container">
+  <div class="publications-content">
+    {% assign current_year = "" %}
     {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
+      {% assign post_year = post.date | date: "%Y" %}
+      {% if current_year != post_year %}
+        <h2 id="year-{{ post_year }}" class="year-heading year-anchor">{{ post_year }}</h2>
+        {% assign current_year = post_year %}
       {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
       {% include archive-single.html %}
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+  </div>
 
-
-
+  <div class="publications-sidebar">
+    <h3>Years</h3>
+    <ul class="year-list">
+      {% assign years = "" | split: "" %}
+      {% for post in site.publications %}
+        {% assign post_year = post.date | date: "%Y" %}
+        {% unless years contains post_year %}
+          {% assign years = years | push: post_year %}
+        {% endunless %}
+      {% endfor %}
+      {% assign years = years | sort | reverse %}
+      {% for year in years %}
+        <li><a href="#year-{{ year }}">{{ year }}</a></li>
+      {% endfor %}
+<script>
+function toggleContent(button) {
+  const content = button.closest('.archive__item').querySelector('.collapsible-content');
+  const icon = button.querySelector('.toggle-icon');
+  
+  if (content.style.display === 'none') {
+    content.style.display = 'block';
+    icon.textContent = '▲';
+  } else {
+    content.style.display = 'none';
+    icon.textContent = '▼';
+  }
+}
+</script>

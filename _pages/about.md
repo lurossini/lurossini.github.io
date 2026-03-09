@@ -5,6 +5,7 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+always_visible: true
 ---
 
 Since 2023, I am a Postdoctoral Research Fellow at the Humanoids and Human Centered Mechatronics laboratory, led by Dr. Nikos Tsagarakis, where I have been leading a commercial project for building two bi-manual quadrupedal prototypes. Together with the managing aspects, which involved me in the coordination of the work and communication, I led the software development team for the codesign and the control framework of the robot, both for the execution of locomotion and manipulation tasks.

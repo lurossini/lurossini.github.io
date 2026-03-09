@@ -1,0 +1,10 @@
+---
+title: "Design and Validation of a Multi-Arm Relocatable Manipulator for Space Applications"
+collection: publications
+date: 2023-07-04
+venue: 'IEEE International Conference on Robotics and Automation (ICRA)'
+paperurl: 'https://raw.githubusercontent.com/lurossini/lurossini.github.io/master/_publications/paper10.pdf'
+bibtexurl: 'https://raw.githubusercontent.com/lurossini/lurossini.github.io/master/_publications/paper10.bib'
+
+---
+This work presents the computational design and validation of the Multi-Arm Relocatable Manipulator (MARM), a three-limb robot for space applications, with particular reference to the MIRROR (i.e., the Multi-arm Installation Robot for Readying ORUs and Reflectors) use-case scenario as proposed by the European Space Agency. A holistic computational design and validation pipeline is proposed, with the aim of comparing different limb designs, as well as ensuring that valid limb candidates enable MARM to perform the complex loco-manipulation tasks required. Moti-vated by the task complexity in terms of kinematic reachability, (self)-collision avoidance, contact wrench limits, and motor torque limits affecting Earth experiments, this work leverages on multiple state-of-art planning and control approaches to aid the robot design and validation. These include sampling-based planning on manifolds, non-linear trajectory optimization, and quadratic programs for inverse dynamics computations with constraints. Finally, we present the attained MARM design and conduct preliminary tests for hardware validation through a set of lab experiments.

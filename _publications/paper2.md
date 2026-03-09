@@ -1,0 +1,13 @@
+---
+title: "HYPERmotion: Learning Hybrid Behavior Planning for Autonomous Loco-manipulation"
+collection: publications
+permalink: /publication/paper1
+# excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+date: 2024-10-21
+venue: 'Conference on Robot Learning (CoRL)'
+# slidesurl: 'https://academicpages.github.io/files/slides1.pdf'
+paperurl: 'https://raw.githubusercontent.com/lurossini/lurossini.github.io/master/_publications/paper2.pdf'
+bibtexurl: 'https://raw.githubusercontent.com/lurossini/lurossini.github.io/master/_publications/paper2.bib'
+# citation: 'L Rossini, P Ferrari, F Ruscelli, A Laurenzi, G Oriolo, N G Tsagarakis, E M Hoffman, "Multi-contact planning and control for humanoid robots: Design and validation of a complete framework", Robotics and Autonomous Systems, Volume 166, 2023'
+---
+Enabling robots to autonomously perform hybrid motions in diverse environments can be beneficial for long-horizon tasks such as material handling, household chores, and work assistance. This requires extensive exploitation of intrinsic motion capabilities, extraction of affordances from rich environmental information, and planning of physical interaction behaviors. Despite recent progress has demonstrated impressive humanoid whole-body control abilities, they struggle to achieve versatility and adaptability for new tasks. In this work, we propose HYPERmotion, a framework that learns, selects and plans behaviors based on tasks in different scenarios. We combine reinforcement learning with whole-body optimization to generate motion for 38 actuated joints and create a motion library to store the learned skills. We apply the planning and reasoning features of the large language models (LLMs) to complex loco-manipulation tasks, constructing a hierarchical task graph that comprises a series of primitive behaviors to bridge lower-level execution with higher-level planning. By leveraging the interaction of distilled spatial geometry and 2D observation with a visual language model (VLM) to ground knowledge into a robotic morphology selector to choose appropriate actions in single- or dual-arm, legged or wheeled locomotion. Experiments in simulation and real-world show that learned motions can efficiently adapt to new tasks, demonstrating high autonomy from free-text commands in unstructured scenes. Videos and website: [hy-motion.github.io](hy-motion.github.io)
